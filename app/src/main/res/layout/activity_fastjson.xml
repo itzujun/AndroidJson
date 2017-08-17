@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <Button
         android:id="@+id/bt_fastjson_tojavaobject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="将JSON对象转换为Java对象"
+        android:textAllCaps="false"
         android:textSize="18sp" />
 
     <Button
@@ -25,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="将java对象转换为JSON对象"
+        android:textAllCaps="false"
         android:textSize="18sp" />
 
     <Button
@@ -34,20 +37,25 @@
         android:layout_margin="5dp"
         android:text="将java集合转换为JSON数组"
         android:textSize="18sp" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:onClick="fastjsonOfComplex"
         android:text="fastjson解析复杂JSON数据"
+        android:textAllCaps="false"
         android:textSize="18sp" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:onClick="fastjsonOfSpecial"
         android:text="fastjson解析特殊JSON数据"
+        android:textAllCaps="false"
         android:textSize="18sp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

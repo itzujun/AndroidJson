@@ -2,6 +2,7 @@ package com.example.zhangdai.androidjson.Activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -93,7 +94,7 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
         ShopInfo shopInfo = new ShopInfo(1, "鲍鱼", 250.0, "baoyu");
 
         // 2 生成JSON数据
-        String json=JSON.toJSONString(shopInfo);
+        String json = JSON.toJSONString(shopInfo);
 
         // 3 显示数据
         tvFastjsonOrignal.setText(shopInfo.toString());
@@ -119,7 +120,21 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
                 "]";
 
         // 2 解析JSON数据
-        List<ShopInfo> shops=JSON.parseArray(json,ShopInfo.class);
+        List<ShopInfo> shops = JSON.parseArray(json, ShopInfo.class);
+
+        for (int i = 0; i < shops.size(); i++) {
+
+            String imagePath = shops.get(i).getImagePath();
+            String name = shops.get(i).getName();
+            double price = shops.get(i).getPrice();
+            int id = shops.get(i).getId();
+            Log.i("TAG", "详细数据：" + "\n"
+                    + "id=" + id + "\n"
+                    + "name=" + name + "\n"
+                    + "price=" + price + "\n"
+                    + "imagePath=" + imagePath + "\n"
+            );
+        }
         // 3 显示数据
         tvFastjsonOrignal.setText(json);
         tvFastjsonLast.setText(shops.toString());
@@ -138,10 +153,21 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
 
         // 2 解析JSON数据
         ShopInfo shopInfo = JSON.parseObject(json, ShopInfo.class);
+        String imagePath = shopInfo.getImagePath();
+        String name = shopInfo.getName();
+        double price = shopInfo.getPrice();
+        int id = shopInfo.getId();
+        Log.i("TAG", "详细数据：" + "\n"
+                + "id=" + id + "\n"
+                + "name=" + name + "\n"
+                + "price=" + price + "\n"
+                + "imagePath=" + imagePath + "\n"
+        );
         // 3 显示数据
         tvFastjsonOrignal.setText(json);
         tvFastjsonLast.setText(shopInfo.toString());
     }
+
     /*
        解析复杂数据
         */
@@ -177,7 +203,10 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
                 "    \"rs_msg\": \"success\"\n" +
                 "}";
 
+
+
     }
+
     /*
        解析特殊数据
         */
@@ -203,5 +232,6 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
                 "    }\n" +
                 "}";
     }
+
 
 }
