@@ -9,10 +9,14 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
 import com.example.zhangdai.androidjson.R;
+import com.example.zhangdai.androidjson.javaBean.DataInfo;
+import com.example.zhangdai.androidjson.javaBean.FilmData;
 import com.example.zhangdai.androidjson.javaBean.ShopInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.alibaba.fastjson.JSON.parseObject;
 
 /**
  * Created by zhangdai on 2017/2/17.
@@ -152,7 +156,7 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
                 "}\n";
 
         // 2 解析JSON数据
-        ShopInfo shopInfo = JSON.parseObject(json, ShopInfo.class);
+        ShopInfo shopInfo = parseObject(json, ShopInfo.class);
         String imagePath = shopInfo.getImagePath();
         String name = shopInfo.getName();
         double price = shopInfo.getPrice();
@@ -203,8 +207,24 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
                 "    \"rs_msg\": \"success\"\n" +
                 "}";
 
+        DataInfo dataInfo = parseObject(json, DataInfo.class);
+        String mag = dataInfo.getRs_msg();
+        Log.i("TAG", "mag:" + mag);
+        String code = dataInfo.getRs_code();
+        Log.i("TAG", "code:" + code);
+        int count = dataInfo.getData().getCount();
+        Log.i("TAG", "count:" + count);
 
-
+        for (int i = 0; i < dataInfo.getData().getItems().size(); i++) {
+            String title = dataInfo.getData().getItems().get(i).getTitle();
+            int id = dataInfo.getData().getItems().get(i).getId();
+            Log.i("TAG", "详细数据：" + "\n"
+                    + "id=" + id + "\n"
+                    + "title=" + title + "\n"
+            );
+        }
+        tvFastjsonOrignal.setText(json);
+        tvFastjsonLast.setText(dataInfo.toString());
     }
 
     /*
@@ -231,6 +251,42 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
                 "        }\n" +
                 "    }\n" +
                 "}";
+
+
+
+        FilmData filmData = parseObject(json, FilmData.class);
+        FilmData.ListBean list = filmData.getList();
+
+        int code = filmData.getCode();
+        list.getClass() ;
+        Log.i("TAG", "" + code);
+//        Log.i("TAG", "" + list.get_$1().getCreate());
+//        filmData.getList().get_$0();
+//        String create1 = filmData.getList().get_$0().getCreate();
+//        String copyright1 = filmData.getList().get_$0().getCopyright();
+//        int coins1 = filmData.getList().get_$0().getCoins();
+//        String author1 = filmData.getList().get_$0().getAuthor();
+//        String aid1 = filmData.getList().get_$0().getAid();
+//        Log.i("TAG", "0Bean：" + "\n"
+//                + "aid=" + aid1 + "\n"
+//                + "author=" + author1 + "\n"
+//                + "coins=" + coins1 + "\n"
+//                + "copyright=" + copyright1 + "\n"
+//                + "create=" + create1 + "\n"
+//        );
+//        String create2 = filmData.getList().get_$1().getCreate();
+//        String copyright2 = filmData.getList().get_$1().getCopyright();
+//        int coins2 = filmData.getList().get_$1().getCoins();
+//        String author2 = filmData.getList().get_$1().getAuthor();
+//        String aid2 = filmData.getList().get_$1().getAid();
+//        Log.i("TAG", "1Bean：" + "\n"
+//                + "aid=" + aid2 + "\n"
+//                + "author=" + author2 + "\n"
+//                + "coins=" + coins2 + "\n"
+//                + "copyright=" + copyright2 + "\n"
+//                + "create=" + create2 + "\n"
+//        );
+
     }
 
 
