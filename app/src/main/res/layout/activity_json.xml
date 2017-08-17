@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <Button
         android:id="@+id/bt_native_tojavaobject"
         android:layout_width="match_parent"
@@ -18,13 +19,15 @@
         android:layout_margin="5dp"
         android:text="将JSON数组转换为Java集合"
         android:textSize="18sp" />
+
     <Button
         android:id="@+id/bt_json_javatojsonobject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="将java对象转换为JSON对象"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/bt_json_javatojsonarray"
@@ -32,7 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="将java集合转换为JSON数组"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone" />
+
     <Button
         android:id="@+id/bt_native_complex"
         android:layout_width="match_parent"

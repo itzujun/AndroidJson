@@ -142,6 +142,66 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
         tvFastjsonOrignal.setText(json);
         tvFastjsonLast.setText(shopInfo.toString());
     }
+    /*
+       解析复杂数据
+        */
+    public void fastjsonOfComplex(View view) {
+        // 1 获取或创建JSON数据
+        String json = "{\n" +
+                "    \"data\": {\n" +
+                "        \"count\": 5,\n" +
+                "        \"items\": [\n" +
+                "            {\n" +
+                "                \"id\": 45,\n" +
+                "                \"title\": \"坚果\"\n" +
+                "            },\n" +
+                "            {\n" +
+                "                \"id\": 132,\n" +
+                "                \"title\": \"炒货\"\n" +
+                "            },\n" +
+                "            {\n" +
+                "                \"id\": 166,\n" +
+                "                \"title\": \"蜜饯\"\n" +
+                "            },\n" +
+                "            {\n" +
+                "                \"id\": 195,\n" +
+                "                \"title\": \"果脯\"\n" +
+                "            },\n" +
+                "            {\n" +
+                "                \"id\": 196,\n" +
+                "                \"title\": \"礼盒\"\n" +
+                "            }\n" +
+                "        ]\n" +
+                "    },\n" +
+                "    \"rs_code\": \"1000\",\n" +
+                "    \"rs_msg\": \"success\"\n" +
+                "}";
 
+    }
+    /*
+       解析特殊数据
+        */
+    public void fastjsonOfSpecial(View view) {
+        // 1 获取或创建JSON数据
+        String json = "{\n" +
+                "    \"code\": 0,\n" +
+                "    \"list\": {\n" +
+                "        \"0\": {\n" +
+                "            \"aid\": \"6008965\",\n" +
+                "            \"author\": \"哔哩哔哩番剧\",\n" +
+                "            \"coins\": 170,\n" +
+                "            \"copyright\": \"Copy\",\n" +
+                "            \"create\": \"2016-08-25 21:34\"\n" +
+                "        },\n" +
+                "        \"1\": {\n" +
+                "            \"aid\": \"6008938\",\n" +
+                "            \"author\": \"哔哩哔哩番剧\",\n" +
+                "            \"coins\": 404,\n" +
+                "            \"copyright\": \"Copy\",\n" +
+                "            \"create\": \"2016-08-25 21:33\"\n" +
+                "        }\n" +
+                "    }\n" +
+                "}";
+    }
 
 }

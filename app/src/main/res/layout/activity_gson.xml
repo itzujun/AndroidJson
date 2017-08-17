@@ -20,6 +20,13 @@
         android:textSize="18sp" />
 
     <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="HeadrList"
+        android:text="有数据头的纯数组数据" />
+
+    <Button
         android:id="@+id/bt_gson_javatojsonobject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +41,20 @@
         android:layout_margin="5dp"
         android:text="将java集合转换为JSON数组"
         android:textSize="18sp" />
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="GSONOfComplex"
+        android:text="GSON解析复杂JSON数据"
+        android:textSize="18sp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="GSONOfSpecial"
+        android:text="GSON解析特殊JSON数据"
+        android:textSize="18sp" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

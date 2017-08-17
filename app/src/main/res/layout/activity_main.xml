@@ -11,24 +11,27 @@
         android:id="@+id/json"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:text="手動解析JSON" />
+        android:text="手动解析JSON"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/GSON"
-        android:text="解析GSON"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="解析GSON"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/FastJson"
-        android:text="解析FastJson"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="解析FastJson"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/NetWoekJson"
-        android:text="解析網絡接口數據"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="解析网络数据"
+        android:textAllCaps="false" />
 </LinearLayout>
