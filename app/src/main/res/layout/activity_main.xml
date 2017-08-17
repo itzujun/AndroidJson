@@ -32,6 +32,30 @@
         android:id="@+id/NetWoekJson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="解析网络数据"
+        android:text="解析网络JSON数据"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dom"
+        android:text="XML解析——DOM"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="pull"
+        android:text="XML解析——Pull"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sax"
+        android:text="XML解析——SAX"
         android:textAllCaps="false" />
 </LinearLayout>
