@@ -123,7 +123,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     /*
-    Pull解析
+    SAX解析的操作
      */
     private void parseXMLWithSAX(InputStream xmlData) {
         try {
