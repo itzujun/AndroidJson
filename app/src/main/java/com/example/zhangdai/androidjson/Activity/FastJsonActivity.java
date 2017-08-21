@@ -21,6 +21,7 @@ import static com.alibaba.fastjson.JSON.parseObject;
 /**
  * Created by zhangdai on 2017/2/17.
  * FastJson解析
+ * Fastjson是一个Java语言编写的JSON处理器,由阿里巴巴公司开发
  */
 public class FastJsonActivity extends Activity implements View.OnClickListener {
     private Button btFastjsonTojavaobject;
