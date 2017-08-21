@@ -261,6 +261,7 @@ public class FastJsonActivity extends Activity implements View.OnClickListener {
         int code = filmData.getCode();
         list.getClass() ;
         Log.i("TAG", "" + code);
+        Log.i("TAG", "" + list.get_$0());
 //        Log.i("TAG", "" + list.get_$1().getCreate());
 //        filmData.getList().get_$0();
 //        String create1 = filmData.getList().get_$0().getCreate();

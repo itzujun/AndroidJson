@@ -54,6 +54,7 @@
         android:onClick="fastjsonOfSpecial"
         android:text="fastjson解析特殊JSON数据"
         android:textAllCaps="false"
+        android:visibility="gone"
         android:textSize="18sp" />
 
     <ScrollView
